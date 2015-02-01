@@ -5,8 +5,16 @@ def create_colocated_schools_ary(schools_hsh)
 		charter_school = v.find { |x| x[3] == "Charter"}
 		if charter_school != nil
 			colocated_addresses_w_charter << {k => v}
-			# v.each {|x| charters_colocation << x}
 		end
 	end
 	colocated_addresses_w_charter
+end
+
+def create_colocated_charters_csv(schools_hsh)
+	schools_hsh.each_pair do |k,v|
+		charter_school = v.find { |x| x[3] == "Charter"}
+		if charter_school != nil
+			v.each {|x| charters_colocation << x}
+		end
+	end
 end
