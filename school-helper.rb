@@ -1,25 +1,25 @@
 class School <
-	Struct.new(	:ATS_System_Code,
-		:Location_Code,
-		:Location_Name,
-		:Managed_By_Name,
-		:Location_Type_Description,
-		:Location_Category_Description,
-		:Grades,
-		:Grades_Final,
-		:Open_Date,
-		:Status_Description,
-		:Building_Code,
-		:Primary_Address,
-		:City,
-		:State_Code,
-		:Zip,
-		:Geographical_District_Code,
-		:Administrative_District_Code,
-		:Administrative_District_Location_Code,
-		:Administrative_District_Name,
-		:Same_Address_As_Another_School
-		)
+	Struct.new(	:ats_system_code,
+							:location_code,
+							:location_name,
+							:managed_by_name,
+							:location_type_description,
+							:location_category_description,
+							:grades,
+							:grades_final,
+							:open_date,
+							:status_description,
+							:building_code,
+							:primary_address,
+							:city,
+							:state_code,
+							:zip,
+							:geographical_district_code,
+							:administrative_district_code,
+							:administrative_district_location_code,
+							:administrative_district_name,
+							:same_address_as_another_school     
+						)
 end
 
 def create_school_objects_ary(csv)
@@ -30,25 +30,25 @@ def create_school_objects_ary(csv)
 	  # each line has fields separated by commas, so split those fields
 	  fields = line.split(',')
 	  s = School.new
-		s.ATS_System_Code = fields[0]
-		s.Location_Code = fields[1]
-		s.Location_Name = fields[2]
-		s.Managed_By_Name = fields[3]
-		s.Location_Type_Description = fields[4]
-		s.Location_Category_Description = fields[5]
-		s.Grades = fields[6]
-		s.Grades_Final = fields[7]
-		s.Open_Date = fields[8]
-		s.Status_Description = fields[9]
-		s.Building_Code = fields[10]
-		s.Primary_Address = fields[11]
-		s.City = fields[12]
-		s.State_Code = fields[13]
-		s.Zip = fields[14]
-		s.Geographical_District_Code = fields[15]
-		s.Administrative_District_Code = fields[16]
-		s.Administrative_District_Location_Code = fields[17]
-		s.Administrative_District_Name = fields[18].chomp
+		s.ats_system_code = fields[0]
+		s.location_code = fields[1]
+		s.location_name = fields[2]
+		s.managed_by_name = fields[3]
+		s.location_type_description = fields[4]
+		s.location_category_description = fields[5]
+		s.grades = fields[6]
+		s.grades_final = fields[7]
+		s.open_date = fields[8]
+		s.status_description = fields[9]
+		s.building_code = fields[10]
+		s.primary_address = fields[11]
+		s.city = fields[12]
+		s.state_code = fields[13]
+		s.zip = fields[14]
+		s.geographical_district_code = fields[15]
+		s.administrative_district_code = fields[16]
+		s.administrative_district_location_code = fields[17]
+		s.administrative_district_name = fields[18].chomp
 	  all_schools.push(s)
 	}
 	all_schools
