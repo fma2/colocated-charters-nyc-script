@@ -29,7 +29,6 @@ schools_hsh = group_schools_with_same_address("csv/schools-with-same-address.csv
 # uses schools_hsh to create an array of hashes of buildings with charter schools
 colocated_charters_ary = create_colocated_schools_ary(schools_hsh)
 
-# puts colocated_charters_ary
 
 # uses colocated charters ary to add these schools to csv
 colocated_charters_csv = open_csv("csv/colocated-charters-and-schools.csv")
@@ -43,5 +42,5 @@ if buildings_with_colocated.count == 0
 	create_colocated_buildings_list(colocated_charters_ary, buildings_with_colocated)
 end
 
-
+puts colocated_charters_ary
 ##prints array of hashes of colocated school buildings with charter
