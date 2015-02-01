@@ -12,10 +12,4 @@ end
 
 def create_colocated_charters_csv(schools_hsh, csv)
 	schools_hsh.each {|x| x.values.each { |y| y.each {|z| csv << z} }}
-	# schools_hsh.each_pair do |k,v|
-	# 	charter_school = v.find { |x| x[3] == "Charter"}
-	# 	if charter_school != nil
-	# 		v.each {|x| charters_colocation << x}
-	# 	end
-	# end
 end
